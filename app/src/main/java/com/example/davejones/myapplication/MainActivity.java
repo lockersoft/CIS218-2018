@@ -37,7 +37,7 @@ public class MainActivity extends BaseActivity {
 
     // Get the current screen Orientation  (Landscape or Portrait)
 
-    Display display = ( (WindowManager) getSystemService( WINDOW_SERVICE ) ).getDefaultDisplay();
+    Display display = ((WindowManager) getSystemService( WINDOW_SERVICE ) ).getDefaultDisplay();
     int orientation = display.getRotation();  // Surface.ROTATION_90 or Surface.ROTATION_270
     portrait = ( orientation == Surface.ROTATION_0 || orientation == Surface.ROTATION_180 );// ? true : false;
     Log.d( "CALC", getString( R.string.orientation) + portrait );
