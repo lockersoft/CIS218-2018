@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mon Application</string>
+    <string name="orientation">Orientation:</string>
+    <string name="landscape">landscape</string>
+    <string name="portrait">portrait</string>
+    <string name="runningOnCreate">Running on create</string>
+    <string name="conversions">Conversions</string>
+    <string name="period">,</string>
+</resources>
