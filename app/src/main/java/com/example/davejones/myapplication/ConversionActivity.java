@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 public class ConversionActivity extends BaseActivity {
 
@@ -20,8 +22,19 @@ public class ConversionActivity extends BaseActivity {
       "Miles to Kilometers",
       "Kilometers to Miles",
       "Gallons to Cups",
+      "Cups to Gallons",
+      "Inches to Centimeters",
+      "Centimeters to Inches",
+      "Miles to Kilometers",
+      "Kilometers to Miles",
+      "Gallons to Cups",
+      "Cups to Gallons",
+      "Inches to Centimeters",
+      "Centimeters to Inches",
+      "Miles to Kilometers",
+      "Kilometers to Miles",
+      "Gallons to Cups",
       "Cups to Gallons"
-
   };
 
   @Override
@@ -41,9 +54,21 @@ public class ConversionActivity extends BaseActivity {
     ArrayAdapter adapter = new ArrayAdapter<String>( this, R.layout.activity_listview, items );  // TODO:  change layout to simple layout with only text view in it.
     listView = (ListView)findViewById( R.id.listView );
     listView.setAdapter( adapter );
+
+//    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//      @Override
+//      public void onItemClick(AdapterView<?> parent, View view,
+//                              int position, long id) {
+//        Toast.makeText(ConversionActivity.this, "You Clicked at " + items[position], Toast.LENGTH_SHORT).show();
+//        performConversion(  position );
+//      }
+//    });
   }
 
-  public void calcButtonOnClick( View v ){
+//  private void performConversion( int position ) {
+//  }
+
+    public void calcButtonOnClick( View v ){
     // Switch to the other activity - calc
     // INTENT   intension - Intend to do something.
     Intent intent = new Intent( this, MainActivity.class);

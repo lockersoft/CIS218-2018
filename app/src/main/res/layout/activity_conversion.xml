@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -19,7 +18,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnCalc"
@@ -30,17 +29,19 @@
         android:onClick="calcButtonOnClick"
         android:text="Go To Calculator"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edtResultTo"
-        android:layout_width="455dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtTo"
-        app:layout_constraintStart_toEndOf="@+id/txtTo"/>
+        app:layout_constraintEnd_toStartOf="@+id/txtToUnits"
+        app:layout_constraintStart_toEndOf="@+id/txtTo" />
 
     <TextView
         android:id="@+id/txtFrom"
@@ -48,58 +49,57 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:labelFor="@+id/edtResultFrom"
         android:text="From: "
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
         android:id="@+id/txtToUnits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:text="XXXXXX"
+        android:text="                     "
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.553"
-        app:layout_constraintStart_toEndOf="@+id/edtResultTo"
-        app:layout_constraintTop_toBottomOf="@+id/txtFromUnits"/>
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtResultTo"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/txtFromUnits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="8dp"
-        android:text="XXXXXX"
+        android:text="                     "
         android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/edtResultFrom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"/>
+        app:layout_constraintStart_toEndOf="@+id/edtResultFrom"
+        app:layout_constraintStart_toStartOf="@+id/txtToUnits" />
 
     <TextView
         android:id="@+id/txtTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:labelFor="@+id/edtResultTo"
         android:text="To: "
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/txtFrom"
-        app:layout_constraintTop_toBottomOf="@+id/txtFrom"/>
+        app:layout_constraintEnd_toEndOf="@+id/txtFrom"
+        app:layout_constraintTop_toBottomOf="@+id/txtFrom" />
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="784dp"
-        android:layout_height="940dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="9dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:scrollbars="vertical"
+        android:scrollbars="none"
         app:layout_constraintBottom_toTopOf="@+id/btnCalc"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -109,10 +109,13 @@
 
     <EditText
         android:id="@+id/edtResultFrom"
-        android:layout_width="456dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:ems="10"
         android:inputType="numberSigned|numberDecimal"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtFrom"
-        app:layout_constraintStart_toEndOf="@+id/txtFrom"/>
+        app:layout_constraintEnd_toStartOf="@+id/txtFromUnits"
+        app:layout_constraintStart_toEndOf="@+id/txtFrom"
+        app:layout_constraintStart_toStartOf="@+id/edtResultTo" />
 </android.support.constraint.ConstraintLayout>
