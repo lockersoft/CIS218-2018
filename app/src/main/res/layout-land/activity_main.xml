@@ -73,7 +73,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn8"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtConversionResult"/>
+        app:layout_constraintTop_toBottomOf="@+id/edtResultTo"/>
 
     <Button
         android:id="@+id/btn6"
@@ -247,7 +247,7 @@
         app:layout_constraintStart_toEndOf="@+id/btnDecimal"/>
 
     <EditText
-        android:id="@+id/edtConversionResult"
+        android:id="@+id/edtResultTo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
